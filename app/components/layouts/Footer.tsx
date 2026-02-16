@@ -1,46 +1,40 @@
+import Link from "next/link";
+import { MainLinks } from "@/app/utils/Data";
+
 export default function Footer() {
   return (
     <footer className="bg-blue-700 text-white">
       <div className="max-w-7xl mx-auto px-4 pt-20 pb-10">
         {/* Top section */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div className="grid grid-cols-2 md:grid-cols-3">
           {/* Logo + description */}
-          <div>
+          <div className="row-start-1 col-start-1 col-end-3 md:col-start-2 text-center mb-12 md:mb-0">
             <h2 className="text-lg font-semibold">
               SD Terpadu Muhammadiyah 1 Besuki
             </h2>
-            <p className="mt-3 text-sm text-blue-100">
+            <p className="mt-4 text-sm text-blue-100">
               Sekolah dasar yang berkomitmen membentuk generasi islami, cerdas,
               dan berakhlak mulia.
             </p>
           </div>
-
           {/* Navigation */}
-          <div>
-            <h3 className="font-semibold mb-3">Menu</h3>
-            <ul className="space-y-2 text-sm">
-              <li>
-                <a href="/" className="hover:text-yellow-300">
-                  Home
-                </a>
-              </li>
-              <li>
-                <a href="/about" className="hover:text-yellow-300">
-                  About
-                </a>
-              </li>
-              <li>
-                <a href="/news" className="hover:text-yellow-300">
-                  News
-                </a>
-              </li>
+          <div className="row-start-2 col-start-1 md:row-start-1 border-r md:border-0">
+            <h3 className="font-semibold mb-6">Menu</h3>
+            <ul className="space-y-3 text-sm">
+              {MainLinks.map((link, _) => (
+                <li key={_}>
+                  <Link href={link.href} className="hover:text-yellow-300">
+                    {link.title}
+                  </Link>
+                </li>
+              ))}
             </ul>
           </div>
 
           {/* Extra links */}
-          <div>
-            <h3 className="font-semibold mb-3">Links</h3>
-            <ul className="space-y-2 text-sm">
+          <div className="row-start-2 col-start-2 md:row-start-1 md:col-start-3 text-right border-l md:border-0">
+            <h3 className="font-semibold mb-6">Links</h3>
+            <ul className="space-y-3 text-sm">
               <li>
                 <a href="#" className="hover:text-yellow-300">
                   PPDB
