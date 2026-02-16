@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import Link from "next/link";
+import { MainLinks } from "@/app/utils/Data";
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -17,15 +18,15 @@ export default function Navbar() {
 
           {/* Desktop Menu */}
           <div className="hidden lg:flex items-center space-x-8 font-medium">
-            <Link href="/" className="hover:text-yellow-300 transition">
-              Home
-            </Link>
-            <Link href="/about" className="hover:text-yellow-300 transition">
-              About
-            </Link>
-            <Link href="/news" className="hover:text-yellow-300 transition">
-              News
-            </Link>
+            {MainLinks.map((link, _) => (
+              <Link
+                key={_}
+                href={link.href}
+                className="hover:text-yellow-300 transition"
+              >
+                {link.title}
+              </Link>
+            ))}
           </div>
 
           {/* Mobile button */}
@@ -56,27 +57,16 @@ export default function Navbar() {
           </div>
 
           <div className="flex flex-col p-4 space-y-4 font-medium">
-            <Link
-              href="/"
-              onClick={() => setIsOpen(false)}
-              className="hover:text-blue-600"
-            >
-              Home
-            </Link>
-            <Link
-              href="/about"
-              onClick={() => setIsOpen(false)}
-              className="hover:text-blue-600"
-            >
-              About
-            </Link>
-            <Link
-              href="/news"
-              onClick={() => setIsOpen(false)}
-              className="hover:text-blue-600"
-            >
-              News
-            </Link>
+            {MainLinks.map((link, _) => (
+              <Link
+                key={_}
+                href={link.href}
+                onClick={() => setIsOpen(false)}
+                className="hover:text-blue-600"
+              >
+                {link.title}
+              </Link>
+            ))}
           </div>
         </div>
       </nav>
