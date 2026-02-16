@@ -7,7 +7,7 @@ export default function Footer() {
       <div className="max-w-7xl mx-auto px-4 pt-20 pb-10">
         {/* Top section */}
         <div className="grid grid-cols-2 md:grid-cols-3">
-          {/* Logo + description */}
+          {/* Logo */}
           <div className="row-start-1 col-start-1 col-end-3 md:col-start-2 text-center mb-12 md:mb-0">
             <h2 className="text-lg font-semibold">
               SD Terpadu Muhammadiyah 1 Besuki
