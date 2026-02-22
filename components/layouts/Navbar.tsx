@@ -18,9 +18,9 @@ export default function Navbar() {
   return (
     <header>
       <nav className="bg-background text-foreground px-4 lg:px-6">
-        <div className=" h-20 flex flex-wrap justify-between items-center mx-auto max-w-7xl">
+        <div className="h-20 flex flex-wrap justify-between items-center mx-auto max-w-7xl">
           {/* Logo */}
-          <Link href="/" className="text-lg font-semibold">
+          <Link href="/" className="text-sm md:text-lg font-semibold">
             SD Terpadu Muhammadiyah 1 Besuki
           </Link>
 
