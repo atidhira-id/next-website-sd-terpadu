@@ -9,6 +9,7 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from "@/components/ui/carousel";
+import { newsEvents } from "@/data/Data";
 
 export default function Home() {
   return (
@@ -100,19 +101,19 @@ export default function Home() {
 
           <Carousel className="w-full">
             <CarouselContent>
-              {Array.from({ length: 8 }).map((_, index) => (
+              {newsEvents.map((_, index) => (
                 <CarouselItem
                   key={index}
                   className="basis-full md:basis-1/2 lg:basis-1/3"
                 >
                   <div className="p-1">
-                    <Card className="border-none rounded-none p-0">
+                    <Card className="border-none rounded-none p-0 hover:bg-accent">
                       <CardContent className="flex flex-col h-72 p-5">
                         <p className="text-sm text-muted-foreground font-serif italic tracking-wider">
-                          Berita
+                          {_.type}
                         </p>
                         <h3 className="font-light text-3xl flex-1 pt-12">
-                          Peringatan Isra Mi'raj 2026
+                          {_.title}
                         </h3>
                         <Link
                           href="#"
@@ -126,11 +127,55 @@ export default function Home() {
                 </CarouselItem>
               ))}
             </CarouselContent>
-            <CarouselPrevious className="text-foreground" />
-            <CarouselNext className="text-foreground" />
+            <CarouselPrevious className="hidden xl:flex text-foreground" />
+            <CarouselNext className="hidden xl:flex text-foreground" />
           </Carousel>
         </div>
       </section>
+
+      <div className="bg-background">
+        <section className="relative max-w-7xl mx-auto px-4">
+          <div className="container py-16 md:py-24 mx-auto">
+            <div className="mb-10">
+              <h3 className="text-xl md:text-3xl text-center leading-none lg:leading-normal font-bold italic text-gray-100">
+                APA KATA ORANG TUA SISWA?
+              </h3>
+            </div>
+
+            <Carousel className="w-full">
+              <CarouselContent>
+                {newsEvents.map((_, index) => (
+                  <CarouselItem
+                    key={index}
+                    className="basis-full md:basis-1/2 "
+                  >
+                    <div className="p-1">
+                      <Card className="border-none rounded-none p-0 hover:bg-accent">
+                        <CardContent className="flex flex-col h-96 p-5">
+                          <p className="text-sm text-muted-foreground font-serif italic tracking-wider">
+                            {_.type}
+                          </p>
+                          <h3 className="font-light text-3xl flex-1 pt-12">
+                            {_.title}
+                          </h3>
+                          <Link
+                            href="#"
+                            className="text-primary text-sm text-right font-light hover:underline"
+                          >
+                            Selengkapnya →
+                          </Link>
+                        </CardContent>
+                      </Card>
+                    </div>
+                  </CarouselItem>
+                ))}
+              </CarouselContent>
+              <CarouselPrevious className="hidden xl:flex text-foreground" />
+              <CarouselNext className="hidden xl:flex text-foreground" />
+            </Carousel>
+          </div>
+        </section>
+      </div>
     </main>
   );
 }
