@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { MainLinks } from "@/app/data/Data";
+import { MainLinks } from "@/data/Data";
 
 export default function Footer() {
   return (

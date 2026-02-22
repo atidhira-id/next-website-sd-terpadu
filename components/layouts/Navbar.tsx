@@ -10,9 +10,9 @@ import {
   NavigationMenuTrigger,
   navigationMenuTriggerStyle,
 } from "@/components/ui/navigation-menu";
-import { MainLinks } from "@/app/data/Data";
+import { MainLinks } from "@/data/Data";
 import { cn } from "@/lib/utils";
-import { MobileNav } from "../ui/MobileNav";
+import { MobileNav } from "@/components/layouts/MobileNav";
 
 export default function Navbar() {
   return (
