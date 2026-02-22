@@ -1,14 +1,21 @@
 import Link from "next/link";
-import { MainLinks } from "@/app/utils/Data";
+import { MainLinks } from "@/app/data/Data";
 
 export default function Footer() {
   return (
-    <footer className="bg-blue-700 text-white">
+    <footer className="bg-background text-foreground">
       <div className="max-w-7xl mx-auto px-4 pt-20 pb-10">
         {/* Top section */}
         <div className="grid grid-cols-2 md:grid-cols-3">
           {/* Logo */}
           <div className="row-start-1 col-start-1 col-end-3 md:col-start-2 text-center mb-12 md:mb-0">
+            <div className="w-20 h-20 mx-auto flex justify-center items-center border mb-3">
+              <p>
+                LOGO
+                <br />
+                SD
+              </p>
+            </div>
             <h2 className="text-lg font-semibold">
               SD Terpadu Muhammadiyah 1 Besuki
             </h2>
