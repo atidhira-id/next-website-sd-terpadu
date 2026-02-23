@@ -148,19 +148,26 @@ export default function Home() {
                 <CarouselItem key={index} className="basis-full md:basis-1/2 ">
                   <div className="p-1">
                     <Card className="border-none rounded-none p-0 hover:bg-accent">
-                      <CardContent className="flex flex-col h-96 p-5">
-                        <p className="text-sm text-muted-foreground font-serif italic tracking-wider">
-                          {_.type}
-                        </p>
-                        <h3 className="font-light text-3xl flex-1 pt-12">
-                          {_.title}
-                        </h3>
-                        <Link
-                          href="#"
-                          className="text-primary text-sm text-right font-light hover:underline"
-                        >
-                          Selengkapnya →
-                        </Link>
+                      <CardContent className="grid lg:grid-cols-[40%_60%] items-center h-96 p-5">
+                        <div className="hidden lg:flex  bg-gray-200 w-3/4 h-3/4 rounded-[5rem] mx-auto  justify-center items-center text-sm text-center">
+                          FOTO <br /> MURID DAN ORTU
+                        </div>
+
+                        <div className="h-full flex flex-col py-8">
+                          <p className="italic text-muted-foreground">
+                            Orang tua dari
+                          </p>
+                          <h3 className="font-bold text-3xl flex-1 pt-3">
+                            Nama Murid
+                          </h3>
+                          <p className="">
+                            Lorem ipsum dolor sit amet consectetur, adipisicing
+                            elit. Adipisci molestiae consequuntur harum ut
+                            eveniet possimus delectus numquam odio velit alias!
+                            Aliquid assumenda eaque quam accusamus blanditiis
+                            cumque vel minus consequuntur?
+                          </p>
+                        </div>
                       </CardContent>
                     </Card>
                   </div>
