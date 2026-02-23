@@ -133,46 +133,82 @@ export default function Home() {
         </div>
       </section>
 
-      <div className="bg-background">
-        <section className="relative max-w-7xl mx-auto px-4">
-          <div className="container py-16 md:py-24 mx-auto">
-            <div className="mb-10">
-              <h3 className="text-xl md:text-3xl text-center leading-none lg:leading-normal font-bold italic text-gray-100">
-                APA KATA ORANG TUA SISWA?
-              </h3>
-            </div>
+      {/* TESTIMONI */}
+      <section className="relative max-w-7xl mx-auto px-4">
+        <div className="container py-16 md:py-24 mx-auto">
+          <div className="mb-10">
+            <h3 className="text-xl md:text-3xl text-center leading-none lg:leading-normal font-bold italic text-gray-800">
+              APA KATA ORANG TUA SISWA?
+            </h3>
+          </div>
 
-            <Carousel className="w-full">
-              <CarouselContent>
-                {newsEvents.map((_, index) => (
-                  <CarouselItem
-                    key={index}
-                    className="basis-full md:basis-1/2 "
-                  >
-                    <div className="p-1">
-                      <Card className="border-none rounded-none p-0 hover:bg-accent">
-                        <CardContent className="flex flex-col h-96 p-5">
-                          <p className="text-sm text-muted-foreground font-serif italic tracking-wider">
-                            {_.type}
-                          </p>
-                          <h3 className="font-light text-3xl flex-1 pt-12">
-                            {_.title}
-                          </h3>
-                          <Link
-                            href="#"
-                            className="text-primary text-sm text-right font-light hover:underline"
-                          >
-                            Selengkapnya →
-                          </Link>
-                        </CardContent>
-                      </Card>
-                    </div>
-                  </CarouselItem>
-                ))}
-              </CarouselContent>
-              <CarouselPrevious className="hidden xl:flex text-foreground" />
-              <CarouselNext className="hidden xl:flex text-foreground" />
-            </Carousel>
+          <Carousel className="w-full">
+            <CarouselContent>
+              {newsEvents.map((_, index) => (
+                <CarouselItem key={index} className="basis-full md:basis-1/2 ">
+                  <div className="p-1">
+                    <Card className="border-none rounded-none p-0 hover:bg-accent">
+                      <CardContent className="flex flex-col h-96 p-5">
+                        <p className="text-sm text-muted-foreground font-serif italic tracking-wider">
+                          {_.type}
+                        </p>
+                        <h3 className="font-light text-3xl flex-1 pt-12">
+                          {_.title}
+                        </h3>
+                        <Link
+                          href="#"
+                          className="text-primary text-sm text-right font-light hover:underline"
+                        >
+                          Selengkapnya →
+                        </Link>
+                      </CardContent>
+                    </Card>
+                  </div>
+                </CarouselItem>
+              ))}
+            </CarouselContent>
+            <CarouselPrevious className="hidden xl:flex text-foreground" />
+            <CarouselNext className="hidden xl:flex text-foreground" />
+          </Carousel>
+        </div>
+      </section>
+
+      {/* CONTACT */}
+      <div className="bg-background py-18 lg:py-24">
+        <section className="relative max-w-7xl mx-auto px-4">
+          <div className="grid md:grid-cols-2 text-left gap-10">
+            {/* Visi */}
+            <div>
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4864.637514457731!2d113.69203097588587!3d-7.738460976708455!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2dd71e5f9ba00cab%3A0x62e2298c5d8d3429!2sSD%20Terpadu%20Muhammadiyah%201%20Besuki!5e1!3m2!1sen!2sid!4v1771832593821!5m2!1sen!2sid"
+                className=" w-full h-90"
+                allowFullScreen
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+              ></iframe>
+            </div>
+            {/* Misi */}
+            <div className="space-y-5">
+              <h3 className="text-3xl font-light leading-none lg:leading-normal tracking-wide text-foreground">
+                KONTAK KAMI
+              </h3>
+              <p className="text-foreground">
+                Besuki, Kec. Besuki, Kabupaten Situbondo, Jawa Timur 68356
+              </p>
+              <div className="space-y-2">
+                <p>📞 0812-3456-7890</p>
+                <p>✉️ info@sdmbesuki1.sch.id</p>
+                <p>🕒 Senin – Jumat, 07.00 – 14.00 WIB</p>
+              </div>
+
+              <a
+                href="https://wa.me/6281234567890"
+                target="_blank"
+                className="inline-block bg-foreground text-background px-6 py-3 rounded-xl shadow-md hover:opacity-90 transition"
+              >
+                Hubungi via WhatsApp
+              </a>
+            </div>
           </div>
         </section>
       </div>
