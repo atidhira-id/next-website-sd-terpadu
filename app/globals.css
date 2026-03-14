@@ -56,8 +56,8 @@
   --popover: oklch(1 0 0);
   --popover-foreground: oklch(0.25 0.05 250);
   /* Primary - Bright School Blue */
-  --primary: oklch(0.62 0.18 250);
-  --primary-foreground: oklch(0.98 0.02 240);
+  --primary: oklch(0.1443 0.0962 268.14);
+  --primary-foreground: oklch(1 0 0);
   /* Secondary - Soft Light Blue */
   --secondary: oklch(0.9 0.08 240);
   --secondary-foreground: oklch(0.4 0.1 250);
