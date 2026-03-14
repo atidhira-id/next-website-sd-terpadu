@@ -5,7 +5,7 @@ export const MainLinks = [
     title: "Tentang",
     child: [
       {
-        href: "/profil",
+        href: "/",
         title: "Profil",
         description: "Sejarah, Visi Misi, dan Lambang Sekolah",
       },
@@ -68,5 +68,28 @@ export const newsEvents = [
     image: "/images/news/class-meeting.jpg",
     date: "2026-02-05",
     body: "Setelah pelaksanaan ujian semester, sekolah mengadakan kegiatan class meeting dengan berbagai perlombaan seperti futsal, lomba mewarnai, dan permainan edukatif lainnya.",
+  },
+];
+
+export const testimonials = [
+  {
+    name: "Rizky Pratama",
+    testimony:
+      "Kami sangat bersyukur menyekolahkan Rizky di SD Muhammadiyah 1 Besuki. Perkembangan akademik dan akhlaknya sangat terlihat, gurunya sabar dan perhatian sehingga Rizky semakin percaya diri dan semangat belajar setiap hari.",
+  },
+  {
+    name: "Siti Aisyah Putri",
+    testimony:
+      "Sejak bersekolah di SD Muhammadiyah 1 Besuki, Aisyah menjadi lebih mandiri dan rajin beribadah. Lingkungan sekolah yang nyaman dan religius membuat kami tenang sebagai orang tua.",
+  },
+  {
+    name: "Muhammad Alif Ramadhan",
+    testimony:
+      "Kami melihat perubahan positif pada Alif, baik dalam prestasi maupun sikapnya di rumah. Program pembelajaran di SD Muhammadiyah 1 Besuki sangat mendukung pengembangan karakter dan potensi anak.",
+  },
+  {
+    name: "Nabila Zahra",
+    testimony:
+      "Nabila merasa senang dan betah belajar di SD Muhammadiyah 1 Besuki. Kegiatan sekolah yang beragam membuatnya lebih aktif, kreatif, dan memiliki banyak teman baik.",
   },
 ];
