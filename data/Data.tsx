@@ -93,3 +93,64 @@ export const testimonials = [
       "Nabila merasa senang dan betah belajar di SD Muhammadiyah 1 Besuki. Kegiatan sekolah yang beragam membuatnya lebih aktif, kreatif, dan memiliki banyak teman baik.",
   },
 ];
+
+export const visiMisi = {
+  visi: {
+    text: "Terwujudnya Generasi yang Berimtaq, Berakhlak Mulia, Kreatif, Unggul, dan Ramah Anak",
+    description: `<p>Visi SD Terpadu Muhammadiyah 1 Besuki ini mencerminkan tekad untuk menghadirkan lingkungan belajar yang tidak hanya berorientasi pada kecerdasan akademik, tetapi juga menumbuhkan karakter yang utuh. serta menciptakan lingkungan belajar yang berpusat pada murid, dengan fokus pada pengembangan Delapan Dimensi Profil Lulusan.</p>
+      <p>Visi ini dirancang realistis, singkat, dan memotivasi, memberikan arah bagi penyelenggaraan pembelajaran yang mendalam, bermakna, dan menggembirakan. Berimtaq menjadi landasan utama seluruh warga sekolah dalam berperilaku dan bertindak, dibarengi dengan Berakhlak Mulia (Berakhlaqul Karimah) melalui pembinaan karakter yang santun, beretika, dan menghargai sesama.</p>
+      <p>Sekolah juga menumbuhkan budaya Kreatif dengan mendorong inovasi, berpikir kritis, dan menghasilkan karya bermanfaat, serta menanamkan semangat Unggul untuk meraih prestasi terbaik di berbagai bidang akademik maupun non-akademik.</p>
+      <p>Selain itu, SD Terpadu Muhammadiyah 1 Besuki berkomitmen menciptakan lingkungan Ramah Anak, yang aman, nyaman, menyenangkan, dan menghargai hak-hak peserta didik, sehingga setiap anak dapat berkembang optimal sesuai potensinya.</p>
+      <p>Visi ini juga menekankan nilai-nilai keimanan, kewargaan, dan keterampilan abad 21 yang relevan dengan karakteristik masyarakat Besuki, seperti semangat gotong royong, pelestarian budaya lokal, dan adaptasi terhadap perkembangan zaman.</p>`,
+  },
+  misi: [
+    {
+      pos: 1,
+      text: "Menanamkan keimanan dan ketakwaan kepada Tuhan Yang Maha Esa",
+      description:
+        " melalui pembelajaran yang berpusat pada murid, pengintegrasian nilai-nilai Islam, aktivitas keagamaan, kepedulian sosial, serta pembiasaan beribadah yang disiplin, jujur, sportif, tanggung jawab, percaya diri, hormat kepada orang tua dan guru, serta menyayangi sesama.",
+    },
+    {
+      pos: 2,
+      text: "Menumbuhkan budaya cinta Al-Qur’an dan pengamalan ajaran Islam",
+      description:
+        " dalam kehidupan sehari-hari, sebagai dasar pembentukan akhlak mulia dan budi pekerti luhur.",
+    },
+    {
+      pos: 3,
+      text: "Mengembangkan pembelajaran kontekstual dan mendalam",
+      description:
+        " yang mendorong penalaran kritis, kreativitas, inovasi, dan literasi dengan memanfaatkan potensi lingkungan sekitar, budaya lokal Besuki, serta teknologi informasi dan komunikasi yang berwawasan global.",
+    },
+    {
+      pos: 4,
+      text: "Membangun kemandirian, tanggung jawab, dan sikap berkebinekaan global",
+      description:
+        " melalui pembelajaran reflektif, pengambilan keputusan yang tepat, dan penghargaan terhadap keragaman budaya.",
+    },
+    {
+      pos: 5,
+      text: "Memfasilitasi kolaborasi dan komunikasi efektif",
+      description:
+        " melalui kegiatan kelompok, diskusi, proyek, gotong royong, dan keterlibatan aktif murid, pendidik, orang tua, komite sekolah, serta masyarakat dalam mendukung ekosistem pendidikan.",
+    },
+    {
+      pos: 6,
+      text: "Meningkatkan prestasi akademik dan non-akademik peserta didik",
+      description:
+        " dengan menciptakan generasi yang siap menghadapi tantangan zaman, berdaya saing, serta berorientasi pada kecakapan hidup.",
+    },
+    {
+      pos: 7,
+      text: "Mempromosikan kesehatan fisik, mental, dan lingkungan belajar yang aman, bersih, sehat, serta ramah anak",
+      description:
+        ", didukung oleh sarana prasarana pendidikan yang memadai dan layak.",
+    },
+    {
+      pos: 8,
+      text: "Meningkatkan kompetensi pendidik dan tenaga kependidikan",
+      description:
+        " melalui pengembangan profesional berkelanjutan berbasis refleksi, kolaborasi, dan layanan pendidikan berkualitas yang membangun kepercayaan masyarakat secara luas.",
+    },
+  ],
+};
