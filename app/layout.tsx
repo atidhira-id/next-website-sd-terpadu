@@ -32,7 +32,7 @@ export default function RootLayout({
       >
         <div className="flex flex-col min-h-screen bg-zinc-50 font-sans">
           <Navbar />
-          {children}
+          <main className="flex-1 bg-foreground">{children}</main>
           <Footer />
         </div>
       </body>
