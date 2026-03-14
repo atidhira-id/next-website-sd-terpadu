@@ -1,6 +1,6 @@
 "use client";
-
 import Link from "next/link";
+import { Mail, Phone } from "lucide-react";
 import {
   NavigationMenu,
   NavigationMenuContent,
@@ -17,14 +17,61 @@ import { MobileNav } from "@/components/layouts/MobileNav";
 export default function Navbar() {
   return (
     <header>
-      <nav className="bg-background text-foreground px-4 lg:px-6">
-        <div className="h-20 flex flex-wrap justify-between items-center mx-auto max-w-7xl">
+      <nav className="px-4 lg:px-6">
+        <div className="flex lg:flex-col justify-between lg:justify-baseline mx-auto max-w-7xl">
           {/* Logo */}
-          <Link href="/" className="text-sm md:text-lg font-semibold">
-            SD Terpadu Muhammadiyah 1 Besuki
-          </Link>
+          <div className="flex justify-between items-center py-4 text-background">
+            <Link href="/" className="text-sm md:text-lg font-semibold">
+              <div className="flex items-center gap-3">
+                <div className="relative w-18 h-18">
+                  <img
+                    src="/images/logo-sdm-besuki.jpg"
+                    alt="Logo Sekolah"
+                    className="object-cover w-full"
+                  />
+                </div>
+                <div>
+                  <p className="text-[10px] sm:text-lg font-bold">
+                    SD TERPADU MUHAMMADIYAH 1 BESUKI
+                  </p>
+                  <p className="text-[10px] sm:text-sm">
+                    Jl. Mawar No. 60 A Kota Timur, BESUKI
+                  </p>
+                </div>
+              </div>
+            </Link>
 
-          {/* Desktop Menu */}
+            <div className="hidden lg:flex gap-12">
+              <div className="flex gap-4 items-center">
+                <div className="w-10 h-10 border rotate-45 flex justify-center items-center">
+                  <Mail className="-rotate-45 w-5 text-red-400" />
+                </div>
+                <div className="flex flex-col">
+                  <p className="text-xs font-bold">EMAIL:</p>
+                  <p className="text-sm">sdtmuh.1besuki@gmail.com</p>
+                </div>
+              </div>
+              <div className="flex gap-4 items-center">
+                <div className="w-10 h-10 border rotate-45 flex justify-center items-center">
+                  <Phone className="-rotate-45 w-5 text-red-400" />
+                </div>
+                <div className="flex flex-col">
+                  <p className="text-xs font-bold">PHONE:</p>
+                  <p className="text-sm">0338893665</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* Mobile Menu */}
+          <div className="flex lg:hidden items-center">
+            <MobileNav links={MainLinks} />
+          </div>
+        </div>
+      </nav>
+      {/* Desktop Menu */}
+      <div className="px-4 lg:px-6 bg-background">
+        <div className="flex lg:flex-col mx-auto max-w-7xl">
           <div className="hidden lg:flex items-center space-x-8 font-medium">
             <NavigationMenu>
               <NavigationMenuList>
@@ -32,7 +79,7 @@ export default function Navbar() {
                   if (Object.hasOwn(listItem, "child")) {
                     return (
                       <NavigationMenuItem key={_}>
-                        <NavigationMenuTrigger>
+                        <NavigationMenuTrigger className="py-8 px-4 rounded-none">
                           {listItem.title}
                         </NavigationMenuTrigger>
                         <NavigationMenuContent>
@@ -57,7 +104,12 @@ export default function Navbar() {
                           asChild
                           className={cn(navigationMenuTriggerStyle())}
                         >
-                          <Link href={listItem.href}>{listItem.title}</Link>
+                          <Link
+                            className="py-8 px-4 rounded-none"
+                            href={listItem.href}
+                          >
+                            {listItem.title}
+                          </Link>
                         </NavigationMenuLink>
                       </NavigationMenuItem>
                     );
@@ -66,12 +118,8 @@ export default function Navbar() {
               </NavigationMenuList>
             </NavigationMenu>
           </div>
-
-          <div className="lg:hidden">
-            <MobileNav links={MainLinks} />
-          </div>
         </div>
-      </nav>
+      </div>
     </header>
   );
 }
