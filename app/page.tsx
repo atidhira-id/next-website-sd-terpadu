@@ -32,12 +32,19 @@ export default function Home() {
                 </p>
 
                 <div className="flex justify-center gap-4">
-                  <Button size="lg" className="rounded-xl">
+                  <Button
+                    size="lg"
+                    className="rounded-xl bg-accent text-accent-foreground hover:bg-accent-foreground hover:text-accent cursor-not-allowed"
+                  >
                     Daftar Sekarang
                   </Button>
 
-                  <Button size="lg" className="rounded-xl" asChild>
-                    <Link href="/tentang/profil">Tentang Kami</Link>
+                  <Button
+                    size="lg"
+                    className="rounded-xl bg-accent text-accent-foreground hover:bg-accent-foreground hover:text-accent"
+                    asChild
+                  >
+                    <Link href="/tentang">Tentang Kami</Link>
                   </Button>
                 </div>
               </div>
