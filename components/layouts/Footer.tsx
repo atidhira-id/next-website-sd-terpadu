@@ -10,11 +10,11 @@ export default function Footer() {
           {/* Logo */}
           <div className="row-start-1 col-start-1 col-end-3 md:col-start-2 text-center mb-12 md:mb-0">
             <div className="w-20 h-20 mx-auto flex justify-center items-center border mb-3">
-              <p>
-                LOGO
-                <br />
-                SD
-              </p>
+              <img
+                src="/images/logo-sdm-besuki.jpg"
+                alt="Logo Sekolah"
+                className="object-cover w-full"
+              />
             </div>
             <h2 className="text-lg font-semibold">
               SD Terpadu Muhammadiyah 1 Besuki
