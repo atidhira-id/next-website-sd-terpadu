@@ -6,19 +6,25 @@ export const MainLinks = [
     child: [
       {
         href: "/",
-        title: "Profil",
-        description: "Sejarah, Visi Misi, dan Lambang Sekolah",
+        title: "Tentang Sekolah",
+        description: "Sejarah dan Lambang Sekolah",
       },
       {
-        href: "/pesan-kepala-sekolah",
-        title: "Pesan Kepala Sekolah",
-        description: "Sambutan Kepala Sekolah untuk siswa dan orang tua",
+        href: "/visi-misi",
+        title: "Visi Misi",
+        description: "Cita-cita dan Tujuan Sekolah di masa depan.",
       },
       {
         href: "/guru-dan-pegawai",
         title: "Guru dan Pegawai",
         description:
           "Daftar tenaga pendidik dan staf sekolah yang berdedikasi dan berpengalaman",
+      },
+      {
+        href: "/siswa",
+        title: "Daftar Siswa",
+        description:
+          "Daftar peserta didik yang mengikuti proses pendidikan di sekolah.",
       },
     ],
   },
