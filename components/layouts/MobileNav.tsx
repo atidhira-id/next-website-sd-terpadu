@@ -17,7 +17,6 @@ import {
   CollapsibleTrigger,
 } from "@/components/ui/collapsible";
 
-import { Button } from "@/components/ui/button";
 import { ChevronDown } from "lucide-react";
 
 interface MobileNavProps {
@@ -37,9 +36,7 @@ export function MobileNav({ links }: MobileNavProps) {
   return (
     <Sheet>
       <SheetTrigger asChild>
-        <Button variant="ghost" size="icon">
-          <Menu className="w-8 h-8" />
-        </Button>
+        <Menu className="w-10 h-10 font-bold text-background" />
       </SheetTrigger>
 
       <SheetContent
