@@ -9,7 +9,7 @@ import {
   NavigationMenuList,
   NavigationMenuTrigger,
   navigationMenuTriggerStyle,
-} from "@/components/ui/navigation-menu";
+} from "@/components/shadcn/navigation-menu";
 import { MainLinks } from "@/data/Data";
 import { cn } from "@/lib/utils";
 import { MobileNav } from "@/components/layouts/MobileNav";

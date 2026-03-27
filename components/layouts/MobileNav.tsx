@@ -9,13 +9,13 @@ import {
   SheetTitle,
   SheetContent,
   SheetTrigger,
-} from "@/components/ui/sheet";
+} from "@/components/shadcn/sheet";
 
 import {
   Collapsible,
   CollapsibleContent,
   CollapsibleTrigger,
-} from "@/components/ui/collapsible";
+} from "@/components/shadcn/collapsible";
 
 import { ChevronDown } from "lucide-react";
 
