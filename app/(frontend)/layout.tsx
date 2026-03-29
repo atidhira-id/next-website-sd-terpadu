@@ -4,6 +4,7 @@ import "./globals.css";
 
 import Navbar from "@/components/layouts/Navbar";
 import Footer from "@/components/layouts/Footer";
+import { getMediaById } from "@/lib/api/media";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -20,20 +21,22 @@ export const metadata: Metadata = {
   description: "Website SD Terpadu Muhammadiyah 1 Besuki",
 };
 
-export default function RootLayout({
+export default async function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  const sdLogo = await getMediaById("1");
+
   return (
     <html lang="id">
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
         <div className="flex flex-col min-h-screen bg-zinc-50 font-sans">
-          <Navbar />
+          <Navbar logo={sdLogo} />
           <main className="flex-1 bg-foreground">{children}</main>
-          <Footer />
+          <Footer logo={sdLogo} />
         </div>
       </body>
     </html>

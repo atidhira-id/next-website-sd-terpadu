@@ -10,7 +10,8 @@ import {
   CarouselPrevious,
 } from "@/components/shadcn/carousel";
 import { Section, FullWidthSection } from "@/components/ui/Section";
-import { newsEvents, testimonials } from "@/data/Data";
+import { newsEvents, testimonials, visiMisi } from "@/data/Data";
+import { ArrowRight } from "lucide-react";
 
 export default function Home() {
   return (
@@ -73,22 +74,18 @@ export default function Home() {
               Visi Kami
             </h3>
             <p className="text-3xl lg:text-4xl font-bold lg:font-light leading-none lg:leading-normal text-black">
-              Membina Siswa untuk Agama, Bangsa, dan Masyarakat.
+              {visiMisi.visi.text}
             </p>
           </div>
-          {/* Misi */}
-          <div>
-            <h3 className="text-sm lg:text-lg font-bold italic tracking-wide mb-2">
-              Misi Kami
-            </h3>
-            <p className="font-serif leading-normal text-gray-700 text-lg">
-              Menyelenggarakan pendidikan yang berkualitas, baik dalam aspek
-              akademik maupun non-akademik dengan menanamkan nilai-nilai
-              Al-Islam dan Kemuhammadiyahan. Sekolah membimbing peserta didik
-              agar tumbuh menjadi generasi yang berintegritas, berjiwa
-              kepemimpinan, serta siap mengabdi kepada agama, bangsa, dan
-              masyarakat.
-            </p>
+          {/* Visi Misi page button */}
+          <div className="flex justify-end-safe items-center">
+            <Link
+              href="/tentang/visi-misi"
+              className="flex items-center gap-1 text-accent-foreground hover:underline"
+            >
+              <p className="text-2xl italic">Selengkapnya</p>
+              <ArrowRight />
+            </Link>
           </div>
         </div>
       </Section>
