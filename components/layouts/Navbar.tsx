@@ -14,7 +14,7 @@ import { MainLinks } from "@/data/Data";
 import { cn } from "@/lib/utils";
 import { MobileNav } from "@/components/layouts/MobileNav";
 
-export default function Navbar() {
+export default function Navbar({ logo }: any) {
   return (
     <header>
       <nav className="px-4 lg:px-6">
@@ -25,7 +25,7 @@ export default function Navbar() {
               <div className="flex items-center gap-3">
                 <div className="relative w-18 h-18">
                   <img
-                    src="/images/logo-sdm-besuki.jpg"
+                    src={`${process.env.NEXT_PUBLIC_SERVER_URL}${logo.url}`}
                     alt="Logo Sekolah"
                     className="object-cover w-full"
                   />
