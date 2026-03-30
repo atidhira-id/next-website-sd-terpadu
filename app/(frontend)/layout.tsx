@@ -5,6 +5,8 @@ import "./globals.css";
 import Navbar from "@/components/layouts/Navbar";
 import Footer from "@/components/layouts/Footer";
 import { getMediaById } from "@/lib/api/media";
+import { SchoolProvider } from "@/context/schoolContext";
+import { getSchoolProfile } from "@/lib/api/Globals";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -27,18 +29,21 @@ export default async function RootLayout({
   children: React.ReactNode;
 }>) {
   const sdLogo = await getMediaById("1");
+  const schoolProfile = await getSchoolProfile();
 
   return (
     <html lang="id">
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
-        <div className="flex flex-col min-h-screen bg-zinc-50 font-sans">
-          <Navbar logo={sdLogo} />
-          <main className="flex-1 bg-foreground">{children}</main>
-          <Footer logo={sdLogo} />
-        </div>
-      </body>
+      <SchoolProvider value={schoolProfile}>
+        <body
+          className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        >
+          <div className="flex flex-col min-h-screen bg-zinc-50 font-sans">
+            <Navbar logo={sdLogo} />
+            <main className="flex-1 bg-foreground">{children}</main>
+            <Footer logo={sdLogo} />
+          </div>
+        </body>
+      </SchoolProvider>
     </html>
   );
 }
