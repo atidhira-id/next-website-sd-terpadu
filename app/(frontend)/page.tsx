@@ -1,3 +1,4 @@
+"use client";
 import Image from "next/image";
 import Link from "next/link";
 import { Button } from "@/components/shadcn/button";
@@ -12,8 +13,10 @@ import {
 import { Section, FullWidthSection } from "@/components/ui/Section";
 import { newsEvents, testimonials, visiMisi } from "@/data/Data";
 import { ArrowRight } from "lucide-react";
+import { useSchool } from "@/context/schoolContext";
 
 export default function Home() {
+  const schoolProfile = useSchool();
   return (
     <>
       {/* BANNER */}
@@ -74,7 +77,7 @@ export default function Home() {
               Visi Kami
             </h3>
             <p className="text-3xl lg:text-4xl font-bold lg:font-light leading-none lg:leading-normal text-black">
-              {visiMisi.visi.text}
+              {schoolProfile.vision}
             </p>
           </div>
           {/* Visi Misi page button */}
@@ -195,17 +198,15 @@ export default function Home() {
             <h3 className="text-3xl font-light leading-none lg:leading-normal tracking-wide text-foreground">
               KONTAK KAMI
             </h3>
-            <p className="text-foreground">
-              Besuki, Kec. Besuki, Kabupaten Situbondo, Jawa Timur 68356
-            </p>
+            <p className="text-foreground">{schoolProfile.address}</p>
             <div className="space-y-2">
-              <p>📞 0338893665</p>
-              <p>✉️ sdtmuh.1besuki@gmail.com</p>
+              <p>📞 {schoolProfile.phone}</p>
+              <p>✉️ {schoolProfile.email}</p>
               <p>🕒 Senin – Jumat, 07.00 – 14.00 WIB</p>
             </div>
 
             <a
-              href="https://wa.me/6281234567890"
+              href="https://wa.me/6281336284354"
               target="_blank"
               className="inline-block bg-foreground text-background px-6 py-3 rounded-xl shadow-md hover:opacity-90 transition"
             >

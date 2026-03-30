@@ -1,7 +1,9 @@
+"use client";
 import { Section } from "@/components/ui/Section";
-import { visiMisi } from "@/data/Data";
+import { useSchool } from "@/context/schoolContext";
 
 export default function VisiMisi() {
+  const schoolProfile = useSchool();
   return (
     <>
       <Section>
@@ -11,7 +13,7 @@ export default function VisiMisi() {
               Visi
             </div>
             <div className="font-serif text-3xl lg:text-4xl font-bold lg:font-light leading-normal text-black">
-              {visiMisi.visi.text}
+              {schoolProfile.vision}
             </div>
           </div>
           <div>
@@ -20,7 +22,9 @@ export default function VisiMisi() {
             </div>
             <div
               className="font-serif text-justify leading-normal text-gray-700 text-sm lg:text-lg space-y-2"
-              dangerouslySetInnerHTML={{ __html: visiMisi.visi.description }}
+              dangerouslySetInnerHTML={{
+                __html: schoolProfile.visionDescription,
+              }}
             />
           </div>
         </div>
@@ -29,11 +33,11 @@ export default function VisiMisi() {
             Misi
           </div>
           <ul className="grid lg:grid-cols-2 gap-y-4 gap-x-8 font-serif text-sm lg:text-lg">
-            {visiMisi.misi.map((item) => {
+            {schoolProfile.mission.map((item: any, pos: any) => {
               return (
-                <li key={item.pos} className="flex justify-around gap-2">
+                <li key={item.text} className="flex justify-around gap-2">
                   <div className="font-bold w-4 shrink-0">
-                    <p>{item.pos}.</p>
+                    <p>{pos + 1}.</p>
                   </div>
                   <p>
                     <span className="font-bold">{item.text}</span>
