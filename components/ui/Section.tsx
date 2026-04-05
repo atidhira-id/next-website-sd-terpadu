@@ -6,6 +6,11 @@ interface SectionProps {
   containerClassName?: string;
 }
 
+interface SectionTitleProps {
+  children: ReactNode;
+  className?: string;
+}
+
 export function Section({
   children,
   className = "",
@@ -19,6 +24,16 @@ export function Section({
         {children}
       </div>
     </section>
+  );
+}
+
+export function SectionTitle({ children, className = "" }: SectionTitleProps) {
+  return (
+    <div
+      className={`border-b-4 border-accent text-accent-foreground text-2xl font-bold tracking-wider mb-3 ${className}`}
+    >
+      {children}
+    </div>
   );
 }
 
