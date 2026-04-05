@@ -1,9 +1,15 @@
-const formatDateToDDMMMYYYY = (dateString: string): string => {
+type FormattedDate = {
+  day: string;
+  month: string;
+  year: string;
+};
+
+export const getDateObject = (dateString: string): FormattedDate => {
   const date = new Date(dateString);
 
   const day = String(date.getUTCDate()).padStart(2, "0");
 
-  const monthNames = [
+  const monthNames: string[] = [
     "Jan",
     "Feb",
     "Mar",
@@ -19,9 +25,12 @@ const formatDateToDDMMMYYYY = (dateString: string): string => {
   ];
   const month = monthNames[date.getUTCMonth()];
 
-  const year = date.getUTCFullYear();
+  const year = String(date.getUTCFullYear());
 
-  return `${day} ${month} ${year}`;
+  return { day, month, year };
 };
 
-export default formatDateToDDMMMYYYY;
+export const getDateString = (date: string): string => {
+  const { day, month, year } = getDateObject(date);
+  return `${day} ${month} ${year}`;
+};
