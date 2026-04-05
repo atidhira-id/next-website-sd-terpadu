@@ -1,5 +1,5 @@
 "use client";
-import { Section } from "@/components/ui/Section";
+import { Section, SectionTitle } from "@/components/ui/Section";
 import { useSchool } from "@/context/schoolContext";
 
 export default function VisiMisi() {
@@ -9,17 +9,13 @@ export default function VisiMisi() {
       <Section>
         <div className="grid lg:grid-cols-2 gap-8 mb-16">
           <div>
-            <div className="border-b-4 border-accent text-accent-foreground text-2xl font-bold tracking-wider mb-3">
-              Visi
-            </div>
+            <SectionTitle>Visi</SectionTitle>
             <div className="font-serif text-3xl lg:text-4xl font-bold lg:font-light leading-normal text-black">
               {schoolProfile.vision}
             </div>
           </div>
           <div>
-            <div className="border-b-4 border-accent text-accent-foreground text-2xl font-bold tracking-wider mb-3">
-              Penjelasan Visi
-            </div>
+            <SectionTitle>Penjelasan Visi</SectionTitle>
             <div
               className="font-serif text-justify leading-normal text-gray-700 text-sm lg:text-lg space-y-2"
               dangerouslySetInnerHTML={{
@@ -29,9 +25,7 @@ export default function VisiMisi() {
           </div>
         </div>
         <div>
-          <div className="border-b-4 border-accent text-accent-foreground text-2xl font-bold tracking-wider mb-3">
-            Misi
-          </div>
+          <SectionTitle>Misi</SectionTitle>
           <ul className="grid lg:grid-cols-2 gap-y-4 gap-x-8 font-serif text-sm lg:text-lg">
             {schoolProfile.mission.map((item: any, pos: any) => {
               return (
