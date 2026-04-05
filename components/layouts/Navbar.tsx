@@ -16,7 +16,7 @@ import { MobileNav } from "@/components/layouts/MobileNav";
 
 export default function Navbar({ logo }: any) {
   return (
-    <header>
+    <header className="bg-foreground">
       <nav className="px-4 lg:px-6">
         <div className="flex lg:flex-col justify-between lg:justify-baseline mx-auto max-w-7xl">
           {/* Logo */}
