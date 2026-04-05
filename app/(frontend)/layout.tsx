@@ -37,9 +37,9 @@ export default async function RootLayout({
         <body
           className={`${geistSans.variable} ${geistMono.variable} antialiased`}
         >
-          <div className="flex flex-col min-h-screen bg-zinc-50 font-sans">
+          <div className="flex flex-col min-h-screen bg-foreground font-sans">
             <Navbar logo={sdLogo} />
-            <main className="flex-1 bg-foreground">{children}</main>
+            <main className="flex-1 bg-gray-100">{children}</main>
             <Footer logo={sdLogo} />
           </div>
         </body>
