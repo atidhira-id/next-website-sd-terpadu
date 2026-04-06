@@ -16,11 +16,11 @@ import { MobileNav } from "@/components/layouts/MobileNav";
 
 export default function Navbar({ logo }: any) {
   return (
-    <header className="bg-foreground">
+    <header className="bg-background">
       <nav className="px-4 lg:px-6">
         <div className="flex lg:flex-col justify-between lg:justify-baseline mx-auto max-w-7xl">
           {/* Logo */}
-          <div className="flex justify-between items-center py-4 text-background">
+          <div className="flex justify-between items-center py-4 text-foreground">
             <Link href="/" className="text-sm md:text-lg font-semibold">
               <div className="flex items-center gap-3">
                 <div className="relative w-18 h-18">
@@ -70,7 +70,7 @@ export default function Navbar({ logo }: any) {
         </div>
       </nav>
       {/* Desktop Menu */}
-      <div className="px-4 lg:px-6 bg-background">
+      <div className="px-4 lg:px-6 bg-foreground">
         <div className="flex lg:flex-col mx-auto max-w-7xl">
           <div className="hidden lg:flex items-center space-x-8 font-medium">
             <NavigationMenu>
@@ -79,7 +79,7 @@ export default function Navbar({ logo }: any) {
                   if (Object.hasOwn(listItem, "child")) {
                     return (
                       <NavigationMenuItem key={_}>
-                        <NavigationMenuTrigger className="py-8 px-4 rounded-none">
+                        <NavigationMenuTrigger className="py-8 px-4 rounded-none bg-foreground text-background">
                           {listItem.title}
                         </NavigationMenuTrigger>
                         <NavigationMenuContent>
@@ -102,7 +102,7 @@ export default function Navbar({ logo }: any) {
                       <NavigationMenuItem key={_}>
                         <NavigationMenuLink
                           asChild
-                          className={cn(navigationMenuTriggerStyle())}
+                          className={`${cn(navigationMenuTriggerStyle())} bg-foreground text-background`}
                         >
                           <Link
                             className="py-8 px-4 rounded-none"

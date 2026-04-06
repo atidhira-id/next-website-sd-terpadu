@@ -36,7 +36,7 @@ export function MobileNav({ links }: MobileNavProps) {
   return (
     <Sheet>
       <SheetTrigger asChild>
-        <Menu className="w-10 h-10 font-bold text-background" />
+        <Menu className="w-10 h-10 font-bold text-foreground" />
       </SheetTrigger>
 
       <SheetContent
@@ -56,7 +56,7 @@ export function MobileNav({ links }: MobileNavProps) {
                   open={openMenus[index]}
                   onOpenChange={() => toggleMenu(index)}
                 >
-                  <CollapsibleTrigger className="flex items-center justify-between w-full text-left font-medium py-2">
+                  <CollapsibleTrigger className="flex items-center justify-between w-full text-secondary-foreground text-left font-medium py-2 cursor-pointer">
                     {item.title}
                     <ChevronDown className="w-4 h-4" />
                   </CollapsibleTrigger>
@@ -66,7 +66,7 @@ export function MobileNav({ links }: MobileNavProps) {
                       <Link
                         key={childIndex}
                         href={item.href + childItem.href}
-                        className="block text-foreground hover:text-primary transition-colors "
+                        className="block font-semibold text-secondary-foreground hover:text-foreground transition-colors "
                       >
                         {childItem.title}
                       </Link>
@@ -80,7 +80,7 @@ export function MobileNav({ links }: MobileNavProps) {
               <Link
                 key={index}
                 href={item.href}
-                className="block py-2 font-medium hover:text-primary transition-colors"
+                className="block py-2 font-medium text-secondary-foreground hover:text-foreground transition-colors"
               >
                 {item.title}
               </Link>

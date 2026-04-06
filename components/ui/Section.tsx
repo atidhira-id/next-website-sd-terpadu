@@ -43,7 +43,9 @@ export function FullWidthSection({
   containerClassName = "",
 }: SectionProps) {
   return (
-    <div className={`bg-background py-18 lg:py-24 ${className}`}>
+    <div
+      className={`bg-foreground text-background py-18 lg:py-24 ${className}`}
+    >
       <section
         className={`relative max-w-7xl mx-auto px-4 ${containerClassName}`}
       >

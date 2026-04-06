@@ -3,7 +3,7 @@ import { MainLinks } from "@/data/Data";
 
 export default function Footer({ logo }: any) {
   return (
-    <footer className="bg-background text-foreground">
+    <footer className="bg-foreground text-background">
       <div className="max-w-7xl mx-auto px-4 pt-20 pb-10">
         {/* Top section */}
         <div className="grid grid-cols-2 md:grid-cols-3">

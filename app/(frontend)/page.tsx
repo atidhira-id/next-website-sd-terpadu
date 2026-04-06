@@ -26,14 +26,10 @@ export default function Home() {
             <div className=" h-full grid items-center gap-10">
               {/* LEFT COLUMN - TEXT */}
               <div className="space-y-6 text-center z-10">
-                <h1 className="text-foreground text-3xl md:text-5xl font-bold leading-tight mb-10">
+                <h1 className="text-background text-3xl md:text-5xl font-bold leading-tight mb-10">
                   <span className="block mb-6">SELAMAT DATANG</span>
                   SD Terpadu <br /> Muhammadiyah 1 Besuki
                 </h1>
-                <p className="font-serif text-gray-100 text-lg leading-normal max-w-3xl mx-auto mb-10">
-                  Sekolah yang membentuk generasi cerdas, berakhlak mulia, dan
-                  siap menghadapi masa depan dengan percaya diri.
-                </p>
 
                 <div className="flex justify-center gap-4">
                   <Button
@@ -73,7 +69,7 @@ export default function Home() {
         <div className="grid md:grid-cols-2 text-left gap-10">
           {/* Visi */}
           <div>
-            <h3 className="text-sm lg:text-lg font-bold italic tracking-wide mb-2">
+            <h3 className="text-sm lg:text-lg font-bold italic tracking-wide mb-2 text-foreground">
               Visi Kami
             </h3>
             <p className="text-3xl lg:text-4xl font-bold lg:font-light leading-none lg:leading-normal text-black">
@@ -96,7 +92,7 @@ export default function Home() {
       {/* BERITA DAN KEGIATAN */}
       <Section>
         <div className="mb-10">
-          <p className="text-sm lg:text-lg font-bold italic tracking-wide mb-2">
+          <p className="text-sm lg:text-lg font-bold italic tracking-wide mb-2 text-foreground">
             Update Terbaru
           </p>
           <h3 className="text-3xl font-light leading-none lg:leading-normal text-gray-800">
@@ -122,7 +118,7 @@ export default function Home() {
                       </h3>
                       <Link
                         href="#"
-                        className="text-primary text-sm text-right font-light hover:underline"
+                        className="text-foreground text-sm text-right font-light hover:underline"
                       >
                         Selengkapnya →
                       </Link>
@@ -137,11 +133,11 @@ export default function Home() {
         </Carousel>
       </Section>
 
-      {/* TESTIMONI */}
+      {/* PENGHARGAAN */}
       <Section>
         <div className="mb-10">
-          <h3 className="text-xl md:text-3xl text-center leading-none lg:leading-normal font-bold italic text-gray-800">
-            APA KATA ORANG TUA SISWA?
+          <h3 className="text-3xl font-light leading-none lg:leading-normal text-gray-800">
+            SISWA BERPRESTASI
           </h3>
         </div>
 
@@ -162,12 +158,18 @@ export default function Home() {
 
                       <div className="h-full flex flex-col py-8">
                         <p className="italic text-muted-foreground">
-                          Orang tua dari
+                          Juara 1 OSN Matematika 2025
                         </p>
                         <h3 className="font-bold text-3xl flex-1 pt-3">
                           {_.name}
                         </h3>
-                        <p className="">{_.testimony}</p>
+                        <p className="mb-2">{_.testimony}</p>
+                        <Link
+                          href="#"
+                          className="text-foreground text-sm text-right font-light hover:underline"
+                        >
+                          Selengkapnya →
+                        </Link>
                       </div>
                     </CardContent>
                   </Card>
@@ -183,7 +185,6 @@ export default function Home() {
       {/* CONTACT */}
       <FullWidthSection>
         <div className="grid md:grid-cols-2 text-left gap-10">
-          {/* Visi */}
           <div>
             <iframe
               src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4864.637514457731!2d113.69203097588587!3d-7.738460976708455!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2dd71e5f9ba00cab%3A0x62e2298c5d8d3429!2sSD%20Terpadu%20Muhammadiyah%201%20Besuki!5e1!3m2!1sen!2sid!4v1771832593821!5m2!1sen!2sid"
@@ -193,12 +194,12 @@ export default function Home() {
               referrerPolicy="no-referrer-when-downgrade"
             ></iframe>
           </div>
-          {/* Misi */}
+
           <div className="space-y-5">
-            <h3 className="text-3xl font-light leading-none lg:leading-normal tracking-wide text-foreground">
+            <h3 className="text-3xl font-light leading-none lg:leading-normal tracking-wide">
               KONTAK KAMI
             </h3>
-            <p className="text-foreground">{schoolProfile.address}</p>
+            <p>{schoolProfile.address}</p>
             <div className="space-y-2">
               <p>📞 {schoolProfile.phone}</p>
               <p>✉️ {schoolProfile.email}</p>
@@ -208,9 +209,9 @@ export default function Home() {
             <a
               href="https://wa.me/6281336284354"
               target="_blank"
-              className="inline-block bg-foreground text-background px-6 py-3 rounded-xl shadow-md hover:opacity-90 transition"
+              className="inline-block bg-background text-foreground px-6 py-3 rounded-xl shadow-md hover:opacity-90 transition"
             >
-              Hubungi via WhatsApp
+              📞 Hubungi via WhatsApp
             </a>
           </div>
         </div>
