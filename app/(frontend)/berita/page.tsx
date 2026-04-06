@@ -13,6 +13,7 @@ import {
 import Link from "next/link";
 import { getDateString } from "@/utils/dateFormat";
 import { ArrowRight } from "lucide-react";
+import { BreadcrumbMenu } from "@/components/ui/Breadcrumb";
 
 export default async function ListBerita() {
   const payload = await getPayloadClient();
@@ -31,8 +32,8 @@ export default async function ListBerita() {
 
   return (
     <>
-      <Section>BERITA TERBARU</Section>
       <Section>
+        <BreadcrumbMenu items={[{ label: "Berita" }]} />
         <div className="grid lg:grid-cols-3 gap-16">
           <div className="lg:col-span-2 not-lg:order-2 ">
             {beritaList.map((berita) => (
