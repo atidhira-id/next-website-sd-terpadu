@@ -60,7 +60,7 @@ export default async function BeritaDetail({
             className="aspect-video object-contain"
           />
         </div>
-        <div className="prose max-w-4xl mx-auto mt-16">
+        <div className="prose max-w-4xl mx-auto mt-16 text-black">
           <RichText data={berita.body} converters={converters} />
         </div>
       </Section>
