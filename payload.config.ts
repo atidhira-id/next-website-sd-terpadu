@@ -11,7 +11,7 @@ import Jabatan from "./app/(payload)/collections/Jabatan";
 export default buildConfig({
   editor: lexicalEditor(),
   globals: [SchoolProfile],
-  collections: [Media, Berita, Jabatan, Guru],
+  collections: [Media, Berita, Guru, Jabatan],
   secret: process.env.PAYLOAD_SECRET!,
   db: postgresAdapter({
     pool: {
