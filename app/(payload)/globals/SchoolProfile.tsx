@@ -24,6 +24,11 @@ export const SchoolProfile: GlobalConfig = {
     },
     {
       name: "phone",
+      label: "Nomor Telepon",
+      type: "text",
+    },
+    {
+      name: "mobilePhone",
       label: "Nomor HP",
       type: "text",
     },
