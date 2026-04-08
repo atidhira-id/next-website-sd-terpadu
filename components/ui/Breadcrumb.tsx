@@ -20,7 +20,7 @@ type BreadcrumbMenuProps = {
 
 export function BreadcrumbMenu({ items }: BreadcrumbMenuProps) {
   return (
-    <Breadcrumb className="mb-8">
+    <Breadcrumb className="mb-12">
       <BreadcrumbList className="text-md">
         <BreadcrumbItem>
           <BreadcrumbLink asChild>
