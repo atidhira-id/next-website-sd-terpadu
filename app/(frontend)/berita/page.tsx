@@ -41,7 +41,6 @@ export default async function ListBerita() {
                 className="relative bg-card mx-auto mb-4 w-full pt-0 rounded-none border-none shadow-none overflow-hidden"
                 key={berita.id}
               >
-                <div className="absolute inset-0 z-30 aspect-video bg-black/35" />
                 <img
                   src={berita.imageUrl.url}
                   alt="Gamber Berita"
@@ -83,7 +82,7 @@ export default async function ListBerita() {
                 </div>
                 <CardDescription className="flex-3/4 flex flex-col">
                   <Link href={`/berita/${berita.slug}`}>
-                    <CardTitle className="not-lg:text-[1.2rem] lg:text-[0.8rem] xl:text-[1rem] hover:text-black">
+                    <CardTitle className="not-lg:text-[1.2rem] lg:text-[0.8rem] xl:text-[1rem] text-gray-700 hover:text-black">
                       {berita.judul}
                     </CardTitle>
                   </Link>
