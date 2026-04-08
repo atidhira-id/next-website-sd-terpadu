@@ -1,4 +1,5 @@
 "use client";
+import { BreadcrumbMenu } from "@/components/ui/Breadcrumb";
 import { Section, SectionTitle } from "@/components/ui/Section";
 import { useSchool } from "@/context/schoolContext";
 
@@ -6,11 +7,12 @@ export default function VisiMisi() {
   const schoolProfile = useSchool();
   return (
     <>
-      <Section>
+      <Section className="text-black">
+        <BreadcrumbMenu items={[{ label: "Visi Misi Sekolah" }]} />
         <div className="grid lg:grid-cols-2 gap-8 mb-16">
           <div>
             <SectionTitle>Visi</SectionTitle>
-            <div className="font-serif text-3xl lg:text-4xl font-bold lg:font-light leading-normal text-black">
+            <div className="font-serif text-3xl lg:text-4xl font-bold lg:font-light leading-normal ">
               {schoolProfile.vision}
             </div>
           </div>
