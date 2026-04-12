@@ -10,5 +10,12 @@ export default async function Home() {
     limit: 3,
   });
 
-  return <HomeClient berita={beritaTerbaru} />;
+  const { docs: prestasi } = await payload.find({
+    collection: "prestasi",
+    where: { status: { equals: "published" } },
+    sort: "-tanggalPublikasi",
+    limit: 2,
+  });
+
+  return <HomeClient berita={beritaTerbaru} prestasi={prestasi} />;
 }
