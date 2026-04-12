@@ -12,15 +12,15 @@ import {
   CarouselPrevious,
 } from "@/components/shadcn/carousel";
 import { Section, FullWidthSection } from "@/components/ui/Section";
-import { newsEvents, testimonials } from "@/data/Data";
 import { ArrowRight } from "lucide-react";
 import { getDateString } from "@/utils/dateFormat";
 
 type Props = {
   berita: any[];
+  prestasi: any[];
 };
 
-export default function HomeClient({ berita }: Props) {
+export default function HomeClient({ berita, prestasi }: Props) {
   const schoolProfile = useSchool();
 
   return (
@@ -108,22 +108,22 @@ export default function HomeClient({ berita }: Props) {
 
         <Carousel className="w-full">
           <CarouselContent>
-            {berita.map((berita) => (
+            {berita.map((item) => (
               <CarouselItem
-                key={berita.id}
+                key={item.id}
                 className="basis-full md:basis-1/2 lg:basis-1/3"
               >
                 <div className="p-1">
                   <Card className="border-none rounded-none p-0 hover:bg-accent">
                     <CardContent className="flex flex-col h-72 p-5">
                       <p className="text-sm text-muted-foreground uppercase tracking-wider">
-                        {getDateString(berita.tanggalPublikasi)}
+                        {getDateString(item.tanggalPublikasi)}
                       </p>
                       <h3 className="font-light text-2xl flex-1 pt-12">
-                        {berita.judul}
+                        {item.judul}
                       </h3>
                       <Link
-                        href={`/berita/${berita.slug}`}
+                        href={`/berita/${item.slug}`}
                         className="text-foreground text-sm text-right font-light hover:underline"
                       >
                         Selengkapnya →
@@ -149,14 +149,17 @@ export default function HomeClient({ berita }: Props) {
 
         <Carousel className="w-full">
           <CarouselContent>
-            {testimonials.map((_, index) => (
-              <CarouselItem key={index} className="basis-full md:basis-1/2 ">
+            {prestasi.map((item) => (
+              <CarouselItem
+                key={item.slug}
+                className="basis-full md:basis-1/2 "
+              >
                 <div className="p-1">
                   <Card className="border-none rounded-none p-0 hover:bg-accent">
                     <CardContent className="grid lg:grid-cols-[40%_60%] items-center h-96 p-5">
                       <div className="hidden lg:flex bg-gray-200 w-3/4 h-3/4 rounded-[5rem] mx-auto justify-center items-center overflow-hidden">
                         <img
-                          src="/images/template-testimony.png"
+                          src={item.imageUrl.url}
                           alt="Template foto"
                           className="object-cover"
                         />
@@ -164,12 +167,12 @@ export default function HomeClient({ berita }: Props) {
 
                       <div className="h-full flex flex-col py-8">
                         <p className="italic text-muted-foreground">
-                          Juara 1 OSN Matematika 2025
+                          {item.prestasi}
                         </p>
                         <h3 className="font-bold text-3xl flex-1 pt-3">
-                          {_.name}
+                          {item.pemilik}
                         </h3>
-                        <p className="mb-2">{_.testimony}</p>
+                        <p className="mb-2">{item.ringkasan}</p>
                         <Link
                           href="#"
                           className="text-foreground text-sm text-right font-light hover:underline"
