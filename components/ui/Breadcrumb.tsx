@@ -21,7 +21,7 @@ type BreadcrumbMenuProps = {
 export function BreadcrumbMenu({ items }: BreadcrumbMenuProps) {
   return (
     <Breadcrumb className="mb-12">
-      <BreadcrumbList className="text-md">
+      <BreadcrumbList className="text-xs md:text-md">
         <BreadcrumbItem>
           <BreadcrumbLink asChild>
             <Link href="/">SD Terpadu Muhammadiyah 1 Besuki</Link>
