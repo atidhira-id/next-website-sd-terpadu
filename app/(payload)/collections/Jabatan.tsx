@@ -32,8 +32,7 @@ const Jabatan: CollectionConfig = {
       label: "Guru / Pegawai yang Menjabat",
       type: "relationship",
       relationTo: "guru",
-      hasMany: false,
-      required: true,
+      hasMany: true,
       admin: {
         description: "Pilih guru atau pegawai yang memegang jabatan ini.",
       },
