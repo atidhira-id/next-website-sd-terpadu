@@ -1,4 +1,8 @@
-import { Section, SectionTitle } from "@/components/ui/Section";
+import {
+  Section,
+  SectionTitle,
+  PageTitleSection,
+} from "@/components/ui/Section";
 import { getPayloadClient } from "@/lib/payload";
 import { Badge } from "@/components/shadcn/badge";
 import {
@@ -32,7 +36,8 @@ export default async function ListBerita() {
 
   return (
     <>
-      <Section>
+      <PageTitleSection title="Berita Sekolah" />
+      <Section containerClassName="pt-4 md:pt-6">
         <BreadcrumbMenu items={[{ label: "Berita" }]} />
         <div className="grid lg:grid-cols-3 gap-16">
           <div className="lg:col-span-2 not-lg:order-2 ">

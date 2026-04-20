@@ -1,13 +1,18 @@
 "use client";
 import { BreadcrumbMenu } from "@/components/ui/Breadcrumb";
-import { Section, SectionTitle } from "@/components/ui/Section";
+import {
+  Section,
+  SectionTitle,
+  PageTitleSection,
+} from "@/components/ui/Section";
 import { useSchool } from "@/context/schoolContext";
 
 export default function VisiMisi() {
   const schoolProfile = useSchool();
   return (
     <>
-      <Section className="text-black">
+      <PageTitleSection title="Visi dan Misi Sekolah" />
+      <Section className="text-black" containerClassName="pt-4 md:pt-6">
         <BreadcrumbMenu items={[{ label: "Visi Misi Sekolah" }]} />
         <div className="grid lg:grid-cols-2 gap-8 mb-16">
           <div>
