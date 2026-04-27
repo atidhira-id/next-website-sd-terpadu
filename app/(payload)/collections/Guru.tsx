@@ -58,6 +58,30 @@ const Guru: CollectionConfig = {
       },
     },
 
+    // ─── Mengajar (hanya untuk Guru) ──────────────────────────
+    {
+      name: "mengajar",
+      label: "Mengajar",
+      type: "text",
+      admin: {
+        description: "Contoh: Matematika, Bahasa Indonesia",
+        condition: (data) => data.jenis === "guru",
+        position: "sidebar",
+      },
+    },
+
+    // ─── Posisi (hanya untuk Pegawai) ──────────────────────────
+    {
+      name: "posisi",
+      label: "Posisi",
+      type: "text",
+      admin: {
+        description: "Contoh: Staf TU, Satpam",
+        condition: (data) => data.jenis === "pegawai",
+        position: "sidebar",
+      },
+    },
+
     // ─── Pendidikan Terakhir ──────────────────────────────────
     {
       name: "pendidikanTerakhir",
