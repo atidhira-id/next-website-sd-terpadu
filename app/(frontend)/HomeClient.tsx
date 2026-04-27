@@ -30,7 +30,6 @@ export default function HomeClient({ berita, prestasi }: Props) {
         <section className="h-[75vh] max-w-7xl mx-auto px-4">
           <div className="h-full container mx-auto">
             <div className=" h-full grid items-center gap-10">
-              {/* LEFT COLUMN - TEXT */}
               <div className="space-y-6 text-center z-10">
                 <h1 className="text-background text-3xl md:text-5xl font-bold leading-tight mb-10">
                   <span className="block mb-6">SELAMAT DATANG</span>
@@ -55,7 +54,6 @@ export default function HomeClient({ berita, prestasi }: Props) {
                 </div>
               </div>
 
-              {/* RIGHT COLUMN - IMAGE */}
               <div className="absolute top-0 bottom-0 left-0 right-0">
                 <Image
                   src="/images/sekolah.jpeg"
