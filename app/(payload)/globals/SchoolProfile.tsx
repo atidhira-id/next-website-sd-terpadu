@@ -61,5 +61,15 @@ export const SchoolProfile: GlobalConfig = {
       type: "upload",
       relationTo: "media",
     },
+    {
+      name: "fotoKepalaSekolah",
+      type: "upload",
+      relationTo: "media",
+    },
+    {
+      name: "sambutanKepalaSekolah",
+      label: "Sambutan Kepala Sekolah",
+      type: "richText",
+    },
   ],
 };
