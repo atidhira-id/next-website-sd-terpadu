@@ -43,18 +43,39 @@ export default function Footer({ logo }: any) {
             <h3 className="font-semibold mb-6">Links</h3>
             <ul className="space-y-3 text-sm">
               <li>
-                <a href="#" className="hover:text-yellow-300">
-                  PPDB
+                <a
+                  href="https://www.facebook.com/profile.php?id=100013602341953&mibextid=rS40aB7S9Ucbxw6v"
+                  target="_blank"
+                  className="hover:text-yellow-300"
+                >
+                  Facebook
                 </a>
               </li>
               <li>
-                <a href="#" className="hover:text-yellow-300">
-                  Galeri
+                <a
+                  href="https://www.instagram.com/sdt_muhammadiyah1besuki?igsh=MW9hMWw1ajQ5MzRncg=="
+                  target="_blank"
+                  className="hover:text-yellow-300"
+                >
+                  Instagram
                 </a>
               </li>
               <li>
-                <a href="#" className="hover:text-yellow-300">
-                  Kontak
+                <a
+                  href="https://www.tiktok.com/@birukoe?_r=1&_t=ZS-93bbb9BjLea"
+                  target="_blank"
+                  className="hover:text-yellow-300"
+                >
+                  Tiktok
+                </a>
+              </li>
+              <li>
+                <a
+                  href="https://youtube.com/@muhibes-jaya?si=wxkrJXoWmnzyrWFP"
+                  target="_blank"
+                  className="hover:text-yellow-300"
+                >
+                  Youtube
                 </a>
               </li>
             </ul>
