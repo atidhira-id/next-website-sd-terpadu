@@ -31,6 +31,11 @@ export default async function RootLayout({
 }>) {
   const schoolProfile = await getSchoolProfile();
 
+  const logo =
+    typeof schoolProfile.logo === "object" && schoolProfile.logo !== null
+      ? schoolProfile.logo.url
+      : null;
+
   return (
     <html lang="id">
       <SchoolProvider value={schoolProfile}>
@@ -38,9 +43,9 @@ export default async function RootLayout({
           className={`${geistSans.variable} ${geistMono.variable} antialiased`}
         >
           <div className="flex flex-col min-h-screen bg-foreground font-sans">
-            <Navbar logo={schoolProfile.logo.url} />
+            <Navbar logo={logo || "/images/logo-sdm-besuki.jpg"} />
             <main className="flex-1 bg-gray-100">{children}</main>
-            <Footer logo={schoolProfile.logo.url} />
+            <Footer logo={logo || "/images/logo-sdm-besuki.jpg"} />
           </div>
         </body>
       </SchoolProvider>
