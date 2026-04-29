@@ -22,6 +22,8 @@ export const metadata: Metadata = {
   description: "Website SD Terpadu Muhammadiyah 1 Besuki",
 };
 
+export const dynamic = "force-dynamic";
+
 export default async function RootLayout({
   children,
 }: Readonly<{
