@@ -1,6 +1,7 @@
 import sharp from "sharp";
 import { lexicalEditor } from "@payloadcms/richtext-lexical";
 import { postgresAdapter } from "@payloadcms/db-postgres";
+import { vercelBlobStorage } from "@payloadcms/storage-vercel-blob";
 import { buildConfig } from "payload";
 import { SchoolProfile } from "./app/(payload)/globals/SchoolProfile";
 import Media from "./app/(payload)/collections/Media";
@@ -20,4 +21,11 @@ export default buildConfig({
     },
   }),
   sharp,
+  plugins: [
+    vercelBlobStorage({
+      enabled: true,
+      collections: { media: true },
+      token: process.env.BLOB_READ_WRITE_TOKEN,
+    }),
+  ],
 });
