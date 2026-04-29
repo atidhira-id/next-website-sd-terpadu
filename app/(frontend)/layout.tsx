@@ -4,7 +4,6 @@ import "./globals.css";
 
 import Navbar from "@/components/layouts/Navbar";
 import Footer from "@/components/layouts/Footer";
-import { getMediaById } from "@/lib/api/media";
 import { SchoolProvider } from "@/context/schoolContext";
 import { getSchoolProfile } from "@/lib/api/Globals";
 
@@ -28,7 +27,6 @@ export default async function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  const sdLogo = await getMediaById("1");
   const schoolProfile = await getSchoolProfile();
 
   return (
@@ -38,9 +36,9 @@ export default async function RootLayout({
           className={`${geistSans.variable} ${geistMono.variable} antialiased`}
         >
           <div className="flex flex-col min-h-screen bg-foreground font-sans">
-            <Navbar logo={sdLogo} />
+            <Navbar logo={schoolProfile.logo.url} />
             <main className="flex-1 bg-gray-100">{children}</main>
-            <Footer logo={sdLogo} />
+            <Footer logo={schoolProfile.logo.url} />
           </div>
         </body>
       </SchoolProvider>

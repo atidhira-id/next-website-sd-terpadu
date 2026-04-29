@@ -25,7 +25,7 @@ export default function Navbar({ logo }: any) {
               <div className="flex items-center gap-3">
                 <div className="relative w-18 h-18">
                   <img
-                    src={`${process.env.NEXT_PUBLIC_SERVER_URL}${logo.url}`}
+                    src={logo.url || "images/logo-sdm-besuki.jpg"}
                     alt="Logo Sekolah"
                     className="object-cover w-full"
                   />

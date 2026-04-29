@@ -157,7 +157,9 @@ export default function HomeClient({ berita, prestasi }: Props) {
                     <CardContent className="grid lg:grid-cols-[40%_60%] items-center h-96 p-5">
                       <div className="hidden lg:flex bg-gray-200 w-3/4 h-3/4 rounded-[5rem] mx-auto justify-center items-center overflow-hidden">
                         <img
-                          src={item.imageUrl.url}
+                          src={
+                            item.imageUrl.url || "images/template-testimony.png"
+                          }
                           alt="Template foto"
                           className="object-cover"
                         />
