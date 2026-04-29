@@ -6,6 +6,7 @@ import {
   type JSXConverters,
 } from "@payloadcms/richtext-lexical/react";
 import { getDateObject } from "@/utils/dateFormat";
+import Image from "next/image";
 
 export default async function BeritaDetail({
   params,
@@ -27,7 +28,12 @@ export default async function BeritaDetail({
 
   const berita = result.docs[0];
 
-  const { day, month, year } = getDateObject(berita.tanggalPublikasi);
+  const { day, month } = getDateObject(berita.tanggalPublikasi);
+
+  const imageUrl =
+    typeof berita.imageUrl === "object" && berita.imageUrl !== null
+      ? berita.imageUrl.url
+      : null;
 
   return (
     <>
@@ -53,10 +59,11 @@ export default async function BeritaDetail({
         </div>
       </FullWidthSection>
       <Section>
-        <div className="h-100 md:h-150 flex justify-center">
-          <img
-            src={berita.imageUrl.url}
+        <div className="relative h-100 md:h-150 flex justify-center">
+          <Image
+            src={imageUrl || "/images/logo-sdm-besuki.jpg"}
             alt="Image Berita"
+            fill
             className="aspect-video object-contain"
           />
         </div>

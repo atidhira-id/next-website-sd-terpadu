@@ -18,6 +18,7 @@ import Link from "next/link";
 import { getDateString } from "@/utils/dateFormat";
 import { ArrowRight } from "lucide-react";
 import { BreadcrumbMenu } from "@/components/ui/Breadcrumb";
+import Image from "next/image";
 
 export default async function ListBerita() {
   const payload = await getPayloadClient();
@@ -46,11 +47,19 @@ export default async function ListBerita() {
                 className="relative bg-card mx-auto mb-4 w-full pt-0 rounded-none border-none shadow-none overflow-hidden"
                 key={berita.id}
               >
-                <img
-                  src={berita.imageUrl.url}
-                  alt="Gamber Berita"
-                  className="relative z-20 aspect-video w-full object-cover brightness-80 grayscale dark:brightness-40"
-                />
+                <div className="relative w-full aspect-video">
+                  <Image
+                    src={
+                      typeof berita.imageUrl === "object" &&
+                      berita.imageUrl !== null
+                        ? berita.imageUrl.url || "/images/logo-sdm-besuki.jpg"
+                        : "/images/logo-sdm-besuki.jpg"
+                    }
+                    alt="Gamber Berita"
+                    fill
+                    className="relative z-20 object-cover brightness-80 grayscale dark:brightness-40"
+                  />
+                </div>
                 <CardHeader>
                   <CardAction>
                     <Badge>{getDateString(berita.tanggalPublikasi)}</Badge>
@@ -78,10 +87,16 @@ export default async function ListBerita() {
                 className="relative bg-inherit mx-auto mb-8 p-0 w-full flex flex-row gap-4 rounded-none border-none shadow-none"
                 key={berita.id}
               >
-                <div className="flex-1/4">
-                  <img
-                    src={berita.imageUrl.url}
+                <div className="relative flex-1/4">
+                  <Image
+                    src={
+                      typeof berita.imageUrl === "object" &&
+                      berita.imageUrl !== null
+                        ? berita.imageUrl.url || "/images/logo-sdm-besuki.jpg"
+                        : "/images/logo-sdm-besuki.jpg"
+                    }
                     alt="Gamber Berita"
+                    fill
                     className="relative z-20 aspect-square object-cover"
                   />
                 </div>
