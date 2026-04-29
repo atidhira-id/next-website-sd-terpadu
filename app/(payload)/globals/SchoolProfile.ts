@@ -1,6 +1,6 @@
 import type { GlobalConfig } from "payload";
 
-export const SchoolProfile: GlobalConfig = {
+const SchoolProfile: GlobalConfig = {
   slug: "school-profile",
   label: "Profil Sekolah",
   access: {
@@ -78,3 +78,5 @@ export const SchoolProfile: GlobalConfig = {
     },
   ],
 };
+
+export default SchoolProfile;
