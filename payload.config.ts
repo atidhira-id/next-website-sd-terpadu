@@ -3,12 +3,12 @@ import { lexicalEditor } from "@payloadcms/richtext-lexical";
 import { postgresAdapter } from "@payloadcms/db-postgres";
 import { vercelBlobStorage } from "@payloadcms/storage-vercel-blob";
 import { buildConfig } from "payload";
-import SchoolProfile from "./app/(payload)/globals/SchoolProfile.ts";
-import Media from "./app/(payload)/collections/Media.ts";
-import Berita from "./app/(payload)/collections/Berita.ts";
-import Prestasi from "./app/(payload)/collections/Prestasi.ts";
-import Guru from "./app/(payload)/collections/Guru.ts";
-import Jabatan from "./app/(payload)/collections/Jabatan.ts";
+import SchoolProfile from "./app/(payload)/globals/SchoolProfile";
+import Media from "./app/(payload)/collections/Media";
+import Berita from "./app/(payload)/collections/Berita";
+import Prestasi from "./app/(payload)/collections/Prestasi";
+import Guru from "./app/(payload)/collections/Guru";
+import Jabatan from "./app/(payload)/collections/Jabatan";
 
 export default buildConfig({
   editor: lexicalEditor(),
