@@ -71,5 +71,10 @@ export const SchoolProfile: GlobalConfig = {
       label: "Sambutan Kepala Sekolah",
       type: "richText",
     },
+    {
+      name: "strukturOrganisasi",
+      type: "upload",
+      relationTo: "media",
+    },
   ],
 };

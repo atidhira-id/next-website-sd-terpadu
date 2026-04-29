@@ -40,7 +40,19 @@ export default function Tentang() {
             />
           </div>
         </div>
-        <SectionTitle className="mt-16 mb-8">Struktur Organisasi</SectionTitle>
+      </Section>
+      <Section>
+        <SectionTitle>Struktur Organisasi</SectionTitle>
+        <div className="w-full overflow-x-auto scrollbar-thin">
+          <div className="relative min-w-300 h-[900px]">
+            <Image
+              src={schoolProfile.strukturOrganisasi.url}
+              alt="Gambar Struktur Organisasi"
+              fill
+              className="object-contain"
+            />
+          </div>
+        </div>
       </Section>
     </>
   );
