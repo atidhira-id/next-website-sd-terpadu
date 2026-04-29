@@ -13,8 +13,10 @@ import {
 import { MainLinks } from "@/data/Data";
 import { cn } from "@/lib/utils";
 import { MobileNav } from "@/components/layouts/MobileNav";
+import Image from "next/image";
 
 export default function Navbar({ logo }: any) {
+  console.log(logo);
   return (
     <header className="bg-background">
       <nav className="px-4 lg:px-6">
@@ -24,9 +26,10 @@ export default function Navbar({ logo }: any) {
             <Link href="/" className="text-sm md:text-lg font-semibold">
               <div className="flex items-center gap-3">
                 <div className="relative w-18 h-18">
-                  <img
-                    src={logo.url || "images/logo-sdm-besuki.jpg"}
+                  <Image
+                    src={logo}
                     alt="Logo Sekolah"
+                    fill
                     className="object-cover w-full"
                   />
                 </div>

@@ -16,6 +16,18 @@ import Image from "next/image";
 export default function Tentang() {
   const schoolProfile = useSchool();
 
+  const kepalaSekolahImage =
+    typeof schoolProfile.fotoKepalaSekolah === "object" &&
+    schoolProfile.fotoKepalaSekolah !== null
+      ? schoolProfile.fotoKepalaSekolah.url
+      : null;
+
+  const strukturOrganisasi =
+    typeof schoolProfile.strukturOrganisasi === "object" &&
+    schoolProfile.strukturOrganisasi !== null
+      ? schoolProfile.strukturOrganisasi.url
+      : null;
+
   return (
     <>
       <PageTitleSection title="Tentang Sekolah" />
@@ -27,7 +39,7 @@ export default function Tentang() {
         <div className="w-full grid md:grid-cols-2 text-foreground gap-y-8">
           <div className="relative min-h-96">
             <Image
-              src={schoolProfile.fotoKepalaSekolah.url}
+              src={kepalaSekolahImage || "/images/kepala-sekolah.jpeg"}
               alt="Foto Kepala Sekolah"
               fill
               className="object-contain"
@@ -45,12 +57,14 @@ export default function Tentang() {
         <SectionTitle>Struktur Organisasi</SectionTitle>
         <div className="w-full overflow-x-auto scrollbar-thin">
           <div className="relative min-w-300 h-[900px]">
-            <Image
-              src={schoolProfile.strukturOrganisasi.url}
-              alt="Gambar Struktur Organisasi"
-              fill
-              className="object-contain"
-            />
+            {strukturOrganisasi && (
+              <Image
+                src={strukturOrganisasi}
+                alt="Gambar Struktur Organisasi"
+                fill
+                className="object-contain"
+              />
+            )}
           </div>
         </div>
       </Section>

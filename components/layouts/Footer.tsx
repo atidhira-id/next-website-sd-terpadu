@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { MainLinks } from "@/data/Data";
+import Image from "next/image";
 
 export default function Footer({ logo }: any) {
   return (
@@ -9,10 +10,11 @@ export default function Footer({ logo }: any) {
         <div className="grid grid-cols-2 md:grid-cols-3">
           {/* Logo */}
           <div className="row-start-1 col-start-1 col-end-3 md:col-start-2 text-center mb-12 md:mb-0">
-            <div className="w-20 h-20 mx-auto flex justify-center items-center border mb-3">
-              <img
-                src={logo.url || "images/logo-sdm-besuki.jpg"}
+            <div className="relative w-20 h-20 mx-auto flex justify-center items-center border mb-3">
+              <Image
+                src={logo}
                 alt="Logo Sekolah"
+                fill
                 className="object-cover w-full"
               />
             </div>
